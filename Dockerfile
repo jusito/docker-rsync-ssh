@@ -10,8 +10,8 @@ COPY ["entrypoint.sh", "ssh-add.sh", "/root/"]
 
 RUN apk update && \
 # rsync openssh-client ca-certificates for secure rsync
-# bash expect for using ssh key
-	apk add --no-cache openssh-client rsync ca-certificates bash expect && \
+# expect for using ssh key
+	apk add --no-cache openssh-client rsync ca-certificates expect && \
 	\
 	mkdir "/root/.ssh/" && \
 	chmod u=rx,go= "/root/entrypoint.sh" "/root/ssh-add.sh" "/root/.ssh/" && \
