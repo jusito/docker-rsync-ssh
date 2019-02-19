@@ -1,0 +1,5 @@
+.git/*
+tools/
+.project
+LICENSE
+*.md

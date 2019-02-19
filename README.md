@@ -1,6 +1,6 @@
 # docker-rsync-ssh-alpine
 
-This container allows rsync over ssh with public key usage.
+This container allows rsync over ssh with public key usage. This is mainly a tool for myself, but maybe you need it too.
 
 ## example with public key and passphrase
 1. Set your key passphrase `-e KEY_PASSPHRASE=YourKeyPassword`
