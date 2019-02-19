@@ -16,7 +16,7 @@ readonly allContainers=($(docker ps -a --format '{{.Names}}' --filter "status=re
 
 for container in "${allContainers[@]}"
 	do
-	backupPlan=$(docker inspect --format '{{index .Config.Labels "$backupLabel"}}' "$container")
+	backupPlan=$(docker inspect --format "{{index .Config.Labels ""$backupLabel""}}" "$container")
 	
 	# check if label existing
 	if [ -n "$backupPlan" ]; then
